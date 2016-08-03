@@ -3523,7 +3523,7 @@
 
 	#footer > .inner .menu {
 		font-size: 0.8em;
-		color: rgba(255, 255, 255, 0.35);
+		color: rgba(255, 255, 255, 0.75);
 	}
 
 	#header + #wrapper + #footer > .inner {
@@ -3882,13 +3882,22 @@
 
 /* Intro */
 
-	#intro {
+	.bpbg {
 		background-attachment: fixed;
-		background-image: url("../../images/front.jpeg");
-		background-position: top right;
+		background-image: url("../../images/front169.png");
+		background-position: center;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: contain;
 	}
+    @media screen and (orientation: portrait) and (min-width:736px) and (max-width:992px) {
+	.bpbg {
+	    background-attachment: fixed;
+	    background-image: url("../../images/front.jpeg");
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	}
+    }
 
 		#intro p {
 			font-size: 1.25em;
