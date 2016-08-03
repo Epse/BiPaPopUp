@@ -59,6 +59,11 @@
 				);
 			});
 
+		// Sizing for last section
+		if (window.innerWidth > 736) {
+		    $("#five").height(window.innerHeight - $("#footer").height());
+		}
+
 		// Sidebar.
 			if ($sidebar.length > 0) {
 
