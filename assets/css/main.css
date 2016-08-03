@@ -3928,9 +3928,14 @@
 		}
 .logobipa {
     background-image: url("../../images/logo.svg");
-    background-size: contain; 
+    background-size: 25%; 
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: bottom right;
+}
+@media screen and (orientation: portrait) and (max-width: 900px) {
+    .logobipa {
+	background-size: 40%; !important
+    }
 }
 
 .twocol {
