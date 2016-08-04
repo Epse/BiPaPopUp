@@ -3986,3 +3986,53 @@
     -moz-border-radius: 3em;
     border-radius: 3em;
 }
+
+.sv650 {
+    background-image: url("../../images/BlurSV650.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.blackBgT {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.hoverblur:hover {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.bootspic {
+    background-image: url("http://www.stylmartin.it/images/home/8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.workshoppic {
+    background-image: url("https://static.pexels.com/photos/1599/building-vehicle-motorbike-motorcycle.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sleutelspic {
+    background-image: url("../../images/sleutels.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.tweedehandspic {
+    background-image: url("https://static.pexels.com/photos/104842/bmw-vehicle-ride-bike-104842.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
