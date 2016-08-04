@@ -2,7 +2,18 @@
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Quite modified by Epse/Stef Pletinck for Bike Parts Zele
 */
+
+function setLastSection() {
+    // Sizing for last section
+    if (window.innerWidth > 1280) {
+	$(".last").height(window.innerHeight - $("#footer").height());
+    }
+    else if (window.innerWidth > 736) {
+	$(".last").height(window.innerHeight - $("#footer").height() - $("#sidebar").height());
+    }
+}
 
 (function($) {
 
@@ -34,6 +45,8 @@
 				}, 100);
 			});
 
+			setLastSection();
+
 		// Forms.
 
 			// Fix: Placeholder polyfill.
@@ -59,9 +72,22 @@
 				);
 			});
 
-		// Sizing for last section
-		if (window.innerWidth > 736) {
-		    $("#five").height(window.innerHeight - $("#footer").height());
+
+		// Currently open?
+		var d = new Date();
+		var n = d.getDay();
+		var cO = $("#currentOpen");
+		if (n >= 2 && n <= 5 && d.getHours() >= 9 && (d.getHours() < 18 || (d.getHours() == 18 && d.getMinutes() < 30))) {
+		    cO.html("<b>Momenteel open tot 18u30!</b>");
+		    cO.addClass("green");
+		} else if (n == 0 && d.getHours() >= 13 && d.getHours < 17) {
+		    cO.html("<b>Momenteel open tot 17u00!</b>");
+		    cO.addClass("green");
+		} else if (n == 6 && d.getHours() >= 9 && d.getHours() < 16) {
+		    cO.html("<b>Momenteel open tot 16u00!</b>");
+		    cO.addClass("green");
+		} else {
+		    cO.html("<b>Momenteel gesloten. Sorry.</b>");
 		}
 
 		// Sidebar.
@@ -212,4 +238,10 @@
 
 	});
 
+	var resizeTimer;
+	$(window).resize(function () {
+	    clearTimeout(resizeTimer);
+	    resizeTimer = setTimeout(setLastSection, 100);
+	});
 })(jQuery);
+
