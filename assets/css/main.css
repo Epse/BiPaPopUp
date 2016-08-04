@@ -3971,7 +3971,18 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
 #footer>.inner {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+.red {
+    background-color: #CB2728; !important
+    -webkit-box-shadow: 2rem 0px 0px #CB2728, -1rem 0px 0px #CB2728;
+    box-shadow: 2rem 0px 0px #CB2728, -1rem 0px 0px #CB2728;
+    padding: 5px 0 5px 5px;
+    box-decoration-break: clone;
+    -moz-border-radius: 3em;
+    border-radius: 3em;
 }
