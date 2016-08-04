@@ -7,7 +7,7 @@
 
 function setLastSection() {
     // Sizing for last section
-    if (window.innerWidth > 1280) {
+    if (window.innerWidth > 1280 || window.innerWidth < 736) {
 	$(".last").height(window.innerHeight - $("#footer").height());
     }
     else if (window.innerWidth > 736) {
