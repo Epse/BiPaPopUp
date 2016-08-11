@@ -93,10 +93,10 @@ function loadjscssfile(filename, filetype){
 		var n = d.getDay();
 		var cO = $("#currentOpen");
 		if ((d.getMonth() < 8 || (d.getDate() < 16 && d.getMonth() == 8)) && d.getFullYear() == 2016) {
-		    c0.html("<b>Gesloten tot opening op 16/8/2016</b>");
+		    cO.html("<b>Gesloten tot opening op 16/8/2016</b>");
 		} else if (d.getFullYear() == 2016 && (d.getDate() == 10 || d.getDate() == 11) && d.getMonth() == 8) {
-		    c0.html("<b>Openingsweekend!</b>");
-		    c0.addClass("green");
+		    cO.html("<b>Openingsweekend!</b>");
+		    cO.addClass("green");
 		} else if (n >= 2 && n <= 5 && d.getHours() >= 9 && (d.getHours() < 18 || (d.getHours() == 18 && d.getMinutes() < 30))) {
 		    cO.html("<b>Momenteel open tot 18u30!</b>");
 		    cO.addClass("green");

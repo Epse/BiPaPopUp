@@ -3286,3 +3286,29 @@
 .hidden {
     display: none
 }
+
+.logopic {
+    height: 5.5em;
+    display: inline-block;
+    *display: inline;
+}
+
+.logoimp {
+    height: 10em;
+    display: inline-block;
+    *display: inline;
+}
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.logoco {
+    width: 80%;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
