@@ -15,6 +15,21 @@ function setLastSection() {
     }
 }
 
+function loadjscssfile(filename, filetype){
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename)
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+}
 (function($) {
 
 	skel.breakpoints({
@@ -77,7 +92,12 @@ function setLastSection() {
 		var d = new Date();
 		var n = d.getDay();
 		var cO = $("#currentOpen");
-		if (n >= 2 && n <= 5 && d.getHours() >= 9 && (d.getHours() < 18 || (d.getHours() == 18 && d.getMinutes() < 30))) {
+		if ((d.getMonth() < 8 || (d.getDate() < 16 && d.getMonth() == 8)) && d.getFullYear() == 2016) {
+		    c0.html("<b>Gesloten tot opening op 16/8/2016</b>");
+		} else if (d.getFullYear() == 2016 && (d.getDate() == 10 || d.getDate() == 11) && d.getMonth() == 8) {
+		    c0.html("<b>Openingsweekend!</b>");
+		    c0.addClass("green");
+		} else if (n >= 2 && n <= 5 && d.getHours() >= 9 && (d.getHours() < 18 || (d.getHours() == 18 && d.getMinutes() < 30))) {
 		    cO.html("<b>Momenteel open tot 18u30!</b>");
 		    cO.addClass("green");
 		} else if (n == 0 && d.getHours() >= 13 && d.getHours < 17) {
@@ -243,5 +263,9 @@ function setLastSection() {
 	    clearTimeout(resizeTimer);
 	    resizeTimer = setTimeout(setLastSection, 100);
 	});
-})(jQuery);
 
+	$(window).load(function () {
+	    loadjscssfile("assets/css/slow.css", "css");
+	    loadjscssfile("assets/css/font-awesome.min.css", "css");
+	});
+})(jQuery);
