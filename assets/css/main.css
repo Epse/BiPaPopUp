@@ -3207,13 +3207,6 @@
 			font-size: 1.25em;
 		}
 
-			@media screen and (max-width: 980px) {
-
-				#intro p br {
-					display: none;
-				}
-
-			}
 
 			@media screen and (max-width: 736px) {
 
@@ -3311,4 +3304,15 @@
     text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
+}
+
+.redtext {
+    background-color: rgba(0,0,0,0.7); !important
+    -webkit-box-shadow: 2rem 0px 0px rgba(0,0,0,0.7), -1rem 0px 0px rgba(0,0,0,0.7);
+    box-shadow: 2rem 0px 0px rgba(0,0,0,0.7), -1rem 0px 0px rgba(0,0,0,0.7);
+    padding: 5px 0 5px 5px;
+    box-decoration-break: clone;
+    -moz-border-radius: 3em;
+    border-radius: 3em;
+    color: #CB2728; !important
 }
