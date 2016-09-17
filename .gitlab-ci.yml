@@ -1,8 +1,3 @@
-before_script:
-  - apt-get update
-  - apt-get install -y -qq ncftp
-  - git checkout optim
-
 upload:
   script:
     - ncftpput -u bppopup -p I4hkJC7H -V -R ftp.bikepartspopup.be public_html/ ./assets
