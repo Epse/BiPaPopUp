@@ -1,2 +1,3 @@
 donothing:
-  echo "done!"
+  script:
+    - echo "done!"
