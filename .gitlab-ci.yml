@@ -1,7 +1,0 @@
-upload:
-  script:
-    - ncftpput -u bppopup -p I4hkJC7H -V -R ftp.bikepartspopup.be public_html/ ./assets
-    - ncftpput -u bppopup -p I4hkJC7H -V ftp.bikepartspopup.be public_html/ index.html
-    - ncftpput -u bppopup -p I4hkJC7H -V -R ftp.bikepartspopup.be public_html/ ./images
-    - ncftpput -u bppopup -p I4hkJC7H -V ftp.bikepartspopup.be public_html/ browserconfig.xml
-    - ncftpput -u bppopup -p I4hkJC7H -V ftp.bikepartspopup.be public_html/ manifest.json
