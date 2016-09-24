@@ -1,3 +1,0 @@
-donothing:
-  script:
-    - echo "done!"
