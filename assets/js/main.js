@@ -96,8 +96,8 @@ function loadjscssfile(filename, filetype){
         cO.html("<b>Cava-Avond tot 20u30!</b>");
         cO.addClass("green");
     }
-		else if (n >= 2 && n <= 5 && d.getHours() >= 9 && (d.getHours() < 18 || (d.getHours() == 18 && d.getMinutes() < 30))) {
-		    cO.html("<b>Momenteel open tot 18u30!</b>");
+		else if (n >= 2 && n <= 5 && d.getHours() >= 9 && d.getHours() < 19) {
+		    cO.html("<b>Momenteel open tot 19u!</b>");
 		    cO.addClass("green");
 		} else if (n == 0 && d.getHours() >= 13 && d.getHours < 17) {
 		    cO.html("<b>Momenteel open tot 17u00!</b>");
